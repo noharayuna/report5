@@ -1,7 +1,9 @@
+
 package jp.ac.uryukyu.ie.e195747;
 
 /**
  * HeroクラスとEnemyクラスの親クラス。
+ *
  *  String name; //名前
  *  int hitPoint; //HP
  *  int attack; //攻撃力
@@ -14,7 +16,19 @@ public class LivingThing {
     private int attack;
     private boolean dead;
 
+    /**
+     *Hero,Enemyから名前を取得する。
+     *
+     * @return name ヒーロー、または敵の名前
+     */
+
     public String getName(){return name;}
+
+    /**
+     * Hero,Enemyからの名前をセットする。
+     *
+     * @param name ヒーロー、または敵の名前。
+     */
     public void setName(String name){this.name = name;}
 
     public int getHitPoint(){ return hitPoint; }
@@ -26,6 +40,13 @@ public class LivingThing {
     public boolean getDead(){return dead;}
     public void setDead(boolean dead){this.dead = dead;}
 
+    /**
+     *コンストラクタを生成する。名前、HPの値、攻撃力の値を引数にもつ。
+     *
+     * @param name ヒーローの名前、または敵の名前
+     * @param hitPoint ヒーローのHPの値、または敵のHPの値
+     * @param attack ヒーローの攻撃力の値、または敵の攻撃力の値
+     */
 
     public LivingThing(String name,int hitPoint,int attack){
         this.name =name;
